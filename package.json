@@ -1,0 +1,21 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "test del programa para el menu",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Oscar Olivas",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.2.0"
+  },
+  "dependencies": {
+    "datatables.net-buttons-dt": "^2.3.4",
+    "datatables.net-dt": "^1.13.2",
+    "jquery": "^3.6.3",
+    "nedb": "^1.8.0",
+    "pdfmake": "^0.2.7"
+  }
+}

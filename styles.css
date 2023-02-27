@@ -1,0 +1,108 @@
+/* Table headers aligment */
+.table th.head{
+  text-align: center;
+  color: white;
+}
+/* Table Headers */
+.table th.hdrd1{
+  background-color:#ed44a9;
+}
+.table th.hdrd2{
+
+  background-color:#c669ff;
+}
+.table th.hdrd3{
+  background-color:#6c7af4;
+
+}
+.table th.hdrd4{
+  background-color:#ff826d;
+
+}
+.table th.hdrd5{
+  background-color:#efab51;
+
+}
+.table th.hdrd6{
+  background-color:#6db6ff;
+
+}
+.table th.hdrd7{
+  background-color:#5db8d1;
+
+}
+.table>:not(caption)>*>*.dat{
+  padding-right: 5px;
+}
+/* .table>:not(caption)>*>*.c0{
+  padding: 5px;
+  margin-right: 0px;
+} */
+.table>:not(caption)>*>*.c1{
+  background-color:#fff5f9;
+
+}
+.table>:not(caption)>*>*.c2{
+  background-color:#efeefc;
+
+}
+.table>:not(caption)>*>*.c3{
+  background-color:#f8f8ff;
+
+}
+.table>:not(caption)>*>*.c4{
+  background-color:#fcf0ee;
+
+}
+.table>:not(caption)>*>*.c5{
+  background-color:#fcf6ee;
+
+}
+.table>:not(caption)>*>*.c6{
+  background-color:#eef5fc;
+
+}
+.table>:not(caption)>*>*.c7{
+  background-color:#eef9fc;
+
+}
+/* .table td.d1 {
+  border-bottom: 0px;
+} */
+#listd1{
+  width: 184px;
+}
+td.dat{
+  max-width: 184px;
+  min-width: 184px;
+  overflow-wrap: break-word;
+  vertical-align: top;
+  color: black;
+  
+}
+/* td.dat>ul{
+  max-width: 160px;
+} */
+td.dat>h6.ingrediente{
+  display: list-item;
+  font-size: 0.9rem;
+
+}
+.table>:not(caption)>*>*{
+  border-color: white;
+  border-right-width: 15px;
+  border-bottom-width: 0px;
+  /* border-spacing: 50px; */
+}
+ .table td.c0{
+  /* max-width: 61.5px;
+  min-width: 61.5px; */
+  min-width: 100px;
+  max-width: 100px;
+  padding: 5px;
+  text-align: center;
+}  
+
+td.dat>h6.comida{
+  font-weight: bold;
+}

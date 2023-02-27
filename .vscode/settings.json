@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 15, //el tamaño de fuente del codigo
+    "editor.minimap.enabled": false,//desactiva el mini mapa del codigo de vsCode
+    "window.zoomLevel": 0, //para darle zoom a toda la ventana de vsCode
+    "editor.wordWrap":"on" //Para hacer que se vea un salto de lina al llegar al limite de vista de la ventana
+}
