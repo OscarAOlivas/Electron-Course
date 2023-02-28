@@ -9,7 +9,7 @@
   "author": "Oscar Olivas",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^22.2.0"
+    "electron": "^22.3.1"
   },
   "dependencies": {
     "datatables.net-buttons-dt": "^2.3.4",
@@ -17,5 +17,13 @@
     "jquery": "^3.6.3",
     "nedb": "^1.8.0",
     "pdfmake": "^0.2.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarAOlivas/Electron-Course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OscarAOlivas/Electron-Course/issues"
+  },
+  "homepage": "https://github.com/OscarAOlivas/Electron-Course#readme"
 }
