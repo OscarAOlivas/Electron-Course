@@ -35,4 +35,29 @@ function obtenerTexto(evento){
 //document.querySelector('h6').addEventListener('dblclick', obtenerTexto)
 
 var elemento = document.querySelector("h6")
+
 elemento.addEventListener("input", function(){})
+
+var celda = document.querySelector("td.dat")
+
+celda.addEventListener("mouseover",function(){
+  var button = celda.querySelector("button")
+  button.style.display = "block"
+  
+})
+
+celda.addEventListener("mouseout",function(){
+  var button = celda.querySelector("button")
+  button.style.display = "none"
+})
+
+var boton = document.getElementById("adding")
+boton.addEventListener("click",function(){
+  var nuevoIngrediente = document.createElement("h6")
+  nuevoIngrediente.classList.add("ingrediente")
+  nuevoIngrediente.setAttribute("contenteditable", "true")
+  var contenido = document.createTextNode("ingrediente")
+  nuevoIngrediente.appendChild(contenido)
+  celda.appendChild(nuevoIngrediente)
+  celda.appendChild(boton)
+})

@@ -86,7 +86,7 @@ td.dat{
 td.dat>h6.ingrediente{
   display: list-item;
   font-size: 0.9rem;
-
+  text-decoration: none;
 }
 .table>:not(caption)>*>*{
   border-color: white;
@@ -105,4 +105,24 @@ td.dat>h6.ingrediente{
 
 td.dat>h6.comida{
   font-weight: bold;
+  text-decoration: none;
+}
+button{
+  display: none;
+}
+.add-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  height: 30px; 
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-btn span {
+  font-size: 25px;
 }
