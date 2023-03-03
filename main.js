@@ -1,4 +1,4 @@
-const {app, BrowserWindow, Menu} = require('electron');
+const {app, BrowserWindow, Menu, ipcMain, dialog} = require('electron');
 const path = require('path')
 
 let ventanaPrincipal;
@@ -32,7 +32,8 @@ function crearVentanaPrincipal(){
         height: 700,
         webPreferences: { //para poder importar require('electron') en cualquier file  
             nodeIntegration: true,
-            contextIsolation: false
+            contextIsolation: false,
+            allowRendererProcessReuse: true
         } 
     });
 
@@ -42,7 +43,7 @@ function crearVentanaPrincipal(){
     ventanaPrincipal.setMenu(menu);
 }
 
-
+//app.allowRendererProcessReuse = true
 app.whenReady().then(crearVentanaPrincipal);
 
 app.on('window-all-closed', function(){
