@@ -37,31 +37,37 @@ function obtenerTexto(evento){
 var elemento = document.querySelector("h6")
 var botones = document.querySelectorAll(".button");
 elemento.addEventListener("input", function(){})
+var celdaActual
+var celdas = document.querySelectorAll("td.dat")
 
-var celda = document.querySelector("td.dat")
-
-celda.addEventListener("mouseover",function(){
-  var button = celda.querySelector("button")
-  button.style.display = "flex"
-  
+celdas.forEach(celda =>{
+    celda.addEventListener("mouseover",function(){
+        //console.log(celda)
+        var button = celda.querySelector("button")
+        button.style.display = "flex"
+     })
 })
 
-celda.addEventListener("mouseout",function(){
-  var button = celda.querySelector("button")
-  button.style.display = "none"
-})
 
+celdas.forEach(celda => {
+    celda.addEventListener("mouseout",function(){
+    var button = celda.querySelector("button")
+    button.style.display = "none"
+    celdaActual = celda
+    })
+})
 //  var boton = document.getElementById("adding")
 //var boton = document.getElementsByClassName("button")
 
 botones.forEach(boton =>{
-  boton.addEventListener("click",function(){
-    var nuevoIngrediente = document.createElement("h6")
-    nuevoIngrediente.classList.add("ingrediente")
-    nuevoIngrediente.setAttribute("contenteditable", "true")
-    var contenido = document.createTextNode("ingrediente")
-    nuevoIngrediente.appendChild(contenido)
-    celda.appendChild(nuevoIngrediente)
-    celda.appendChild(boton)
-  })
+    boton.addEventListener("click",function(){
+        var nuevoIngrediente = document.createElement("h6")
+        nuevoIngrediente.classList.add("ingrediente")
+        nuevoIngrediente.setAttribute("contenteditable", "true")
+        var contenido = document.createTextNode("ingrediente")
+        nuevoIngrediente.appendChild(contenido)
+        celdaActual.appendChild(nuevoIngrediente)
+        celdaActual.appendChild(boton)
+    
+     })
 })
