@@ -107,7 +107,7 @@ td.dat>h6.comida{
   font-weight: bold;
   text-decoration: none;
 }
-button{
+.add-btn{
   display: none;
   background-color: green;
   color: white;
@@ -119,6 +119,22 @@ button{
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  margin-right: 10px;
+}
+
+.del-btn{
+  display: none;
+  background-color: rgb(182, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  height: 30px; 
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
 }
 /* .add-btn {
   background-color: green;
@@ -137,5 +153,9 @@ button{
   font-size: 25px;
 }
 td:hover .button {
-  display: flex;
+  display: inline-flex;
+}
+.divbotones{
+  display: inline-flex; 
+  margin-right: 10px;
 }

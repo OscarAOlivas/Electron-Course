@@ -35,39 +35,57 @@ function obtenerTexto(evento){
 //document.querySelector('h6').addEventListener('dblclick', obtenerTexto)
 
 var elemento = document.querySelector("h6")
-var botones = document.querySelectorAll(".button");
-elemento.addEventListener("input", function(){})
+var addButtons = document.querySelectorAll(".add-btn");
+var deleteButtons = document.querySelectorAll(".del-btn");
 var celdaActual
 var celdas = document.querySelectorAll("td.dat")
+
+elemento.addEventListener("input", function(){})
 
 celdas.forEach(celda =>{
     celda.addEventListener("mouseover",function(){
         //console.log(celda)
-        var button = celda.querySelector("button")
-        button.style.display = "flex"
+        var addButton = celda.querySelector(".add-btn")
+        var deleteButton = celda.querySelector(".del-btn")
+        console.log(deleteButton)
+        addButton.style.display = "flex"
+        deleteButton.style.display = "flex"
+        celdaActual = celda
      })
 })
 
 
 celdas.forEach(celda => {
     celda.addEventListener("mouseout",function(){
-    var button = celda.querySelector("button")
-    button.style.display = "none"
-    celdaActual = celda
+        var addButton = celda.querySelector(".add-btn")
+        var deleteButton = celda.querySelector(".del-btn")
+        addButton.style.display = "none"
+        deleteButton.style.display = "none"
+    
     })
 })
-//  var boton = document.getElementById("adding")
-//var boton = document.getElementsByClassName("button")
 
-botones.forEach(boton =>{
+
+addButtons.forEach(boton =>{
     boton.addEventListener("click",function(){
         var nuevoIngrediente = document.createElement("h6")
+        var nuevoDiv = document.createElement("div")
+        var deleteButton = celdaActual.querySelector(".del-btn")
         nuevoIngrediente.classList.add("ingrediente")
         nuevoIngrediente.setAttribute("contenteditable", "true")
         var contenido = document.createTextNode("ingrediente")
         nuevoIngrediente.appendChild(contenido)
         celdaActual.appendChild(nuevoIngrediente)
-        celdaActual.appendChild(boton)
+
+        nuevoDiv.classList.add("divbotones")
+        var divActual = celdaActual.querySelector(".divbotones")
+        divActual.remove()
+
+        celdaActual.appendChild(nuevoDiv)
+        divActual = celdaActual.querySelector(".divbotones")
+        divActual.appendChild(boton)
+        divActual.appendChild(deleteButton)
+
     
      })
 })
