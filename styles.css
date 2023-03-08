@@ -87,6 +87,7 @@ td.dat>h6.ingrediente{
   display: list-item;
   font-size: 0.9rem;
   text-decoration: none;
+  position: relative;
 }
 .table>:not(caption)>*>*{
   border-color: white;
@@ -158,4 +159,18 @@ td:hover .button {
 .divbotones{
   display: inline-flex; 
   margin-right: 10px;
+}
+.close-button{
+  position:absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  padding: 0 5px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20%
+}
+h6.ingrediente:hover .close-button {
+  display: block;
 }

@@ -70,11 +70,18 @@ addButtons.forEach(boton =>{
     boton.addEventListener("click",function(){
         var nuevoIngrediente = document.createElement("h6")
         var nuevoDiv = document.createElement("div")
+        var nuevoSpan = document.createElement("span")
         var deleteButton = celdaActual.querySelector(".del-btn")
         nuevoIngrediente.classList.add("ingrediente")
         nuevoIngrediente.setAttribute("contenteditable", "true")
         var contenido = document.createTextNode("ingrediente")
+
+        nuevoSpan.classList.add("close-button")
+        nuevoSpan.setAttribute("contenteditable", "false")
+        var contenidoSpan = document.createTextNode("X")
         nuevoIngrediente.appendChild(contenido)
+        nuevoSpan.appendChild(contenidoSpan)
+        nuevoIngrediente.appendChild(nuevoSpan)
         celdaActual.appendChild(nuevoIngrediente)
 
         nuevoDiv.classList.add("divbotones")
