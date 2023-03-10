@@ -110,20 +110,20 @@ td.dat>h6.comida{
 }
 .add-btn{
   display: none;
-  background-color: green;
+  background-color: rgb(133, 131, 131);
   color: white;
   border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  width: 30px;
-  height: 30px; 
+  border-radius: 20%;
+  font-size: 15px;
+  width: 20px;
+  height: 20px; 
   cursor: pointer;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
 }
 
-.del-btn{
+/* .del-btn{
   display: none;
   background-color: rgb(182, 0, 0);
   color: white;
@@ -136,7 +136,7 @@ td.dat>h6.comida{
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-}
+} */
 /* .add-btn {
   background-color: green;
   color: white;
@@ -166,7 +166,7 @@ td:hover .button {
   right: 0;
   display: none;
   padding: 0 5px;
-  background-color: #ccc;
+  background-color: rgb(133, 131, 131);
   color: #fff;
   cursor: pointer;
   border-radius: 20%
