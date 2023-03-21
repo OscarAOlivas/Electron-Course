@@ -1,5 +1,5 @@
 
-var elemento = document.querySelector("h6")
+//var ingredientes = document.querySelectorAll("h6")
 var addButtons = document.querySelectorAll(".add-btn");
 var celdaActual
 var closeButtonActual
@@ -13,6 +13,23 @@ var celdas = document.querySelectorAll("td.dat")
 //     } else {
 //       $('.ingrediente').text(valor);
 //     }
+// // })
+// ingredientes.forEach(ingrediente => {
+//     //console.log(ingrediente)
+//     ingrediente.addEventListener("click",function(){
+//         var closeButton = ingrediente.querySelectorAll('.close-button')
+//         closeButton.style.display = "none"
+//     })
+
+//     ingrediente.addEventListener("mouseover",function(){
+//         var closeButton = ingrediente.querySelector('.close-button')
+//         closeButton.style.display = "block"
+//     })
+
+//     ingrediente.addEventListener("mouseout",function(){
+//         var closeButton = ingrediente.querySelector('.close-button')
+//         closeButton.style.display = "none"
+//     })
 // })
 
 celdas.forEach(celda =>{
@@ -21,23 +38,59 @@ celdas.forEach(celda =>{
         getCloseButtons = celda.querySelectorAll("span.close-button")
         addButton.style.display = "flex"
         celdaActual = celda
-
+        //console.log(celda)
         getCloseButtons.forEach(closeButton =>{
             closeButton.addEventListener("click",function(){
                 eliminarIngrediente = this.parentNode;
-                eliminarIngrediente.remove()           
+                eliminarIngrediente.remove()          
             })
-        })  
+        })
+        
+        var ingredientes = celda.querySelectorAll("h6.ingrediente")
+        // ingredientes.forEach(ingrediente => {
+        //     ingrediente.addEventListener("click",function(){
+        //         var closeButton = ingrediente.querySelector('.close-button')          
+        //         closeButton.style.display = "none"
+                
+            
+        //     })
+        ingredientes.forEach(ingrediente => {
+            ingrediente.addEventListener("mouseover",function(){
+                var closeButton = ingrediente.querySelector('.close-button')
+                //console.log(ingrediente)
+                closeButton.style.display = "block"
+
+                })
+        
+            ingrediente.addEventListener("mouseout",function(){
+                var closeButton = ingrediente.querySelector('.close-button')
+                closeButton.style.display = "none"
+                })
+
+            
+                ingrediente.addEventListener("click",function(){
+                    var closeButton = ingrediente.querySelector('.close-button')          
+                    closeButton.style.display = "none"
+                    ingrediente.click()
+            
+                })
+        })
      })
-})
 
-
-celdas.forEach(celda => {
-    celda.addEventListener("mouseout",function(){
+     celda.addEventListener("mouseout",function(){
         var addButton = celda.querySelector(".add-btn")
         addButton.style.display = "none"
     })
+     
 })
+
+
+// celdas.forEach(celda => {
+//     celda.addEventListener("mouseout",function(){
+//         var addButton = celda.querySelector(".add-btn")
+//         addButton.style.display = "none"
+//     })
+// })
 
 
 addButtons.forEach(boton =>{
