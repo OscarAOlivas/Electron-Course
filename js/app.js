@@ -74,8 +74,18 @@ celdas.forEach(celda =>{
                     ingrediente.click()
             
                 })
+                ingrediente.addEventListener('keydown', function(event) {
+                    if(event.keyCode === 8|| event.keyCode === 46 ){
+                        console.log(ingrediente.innerText)
+                        if(ingrediente.innerText===''){
+                            event.preventDefault()
+                        }
+                        
+                    }
+                })
+            })
         })
-     })
+     
 
      celda.addEventListener("mouseout",function(){
         var addButton = celda.querySelector(".add-btn")
