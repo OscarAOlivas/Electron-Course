@@ -91,7 +91,7 @@ td.dat>h6.ingrediente{
 }
 .table>:not(caption)>*>*{
   border-color: white;
-  border-right-width: 15px;
+  border-right-width: 4px;
   border-bottom-width: 0px;
   /* border-spacing: 50px; */
 }
@@ -173,4 +173,23 @@ td:hover .button {
 }
 h6.ingrediente:hover .close-button {
   display: block;
+}
+#labelnotes{
+  font-weight: bold;
+  color: black;
+}
+
+div.p-5 {
+  width: 100%;
+  height: 100%;
+  overflow-x: visible;
+}
+#textareanotes{
+  resize: none;
+  border: transparent;
+  color: black;
+}
+#textareanotes:focus{
+  resize: both;
+  border:black
 }
